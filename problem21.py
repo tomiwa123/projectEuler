@@ -7,8 +7,9 @@ if __name__ == '__main__':
                 if poss_factor not in {number / poss_factor, 1}:
                     divisor_sum += number // poss_factor
         return divisor_sum
-    print(sum_divisors(220))
 
+
+    print(sum_divisors(220))
 
     amicable_sum = 0
     store = ["NOT TOUCH"]
