@@ -14,7 +14,7 @@ if __name__ == '__main__':
 
     longest_length = 0
     longest_number = 1
-    for num in range(2, 10000):
+    for num in range(2, 1000):
         dec = (10 ** 50) // num
         if dec % (10 ** 49) == 0:
             continue
@@ -23,6 +23,6 @@ if __name__ == '__main__':
             longest_length = repeating
             longest_number = num
     print(longest_number, longest_length)
-    print(round((10 ** 50) // 81, 20))
-    print(round((10 ** 50) // 648, 20))
-    print(count_recurring((10 ** 50) // 648))
+    print(round((10 ** 200) // 983, 20))
+    print(count_recurring((10 ** 90) // 983))
+     # answer  = 983 tho
