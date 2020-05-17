@@ -5,6 +5,7 @@ if __name__ == '__main__':
         return number * factorial(number - 1)
 
     current = 1000000
+    # filler elements in string to make double checking easy
     answer = ["S"]*10
 
     for num in range(0, 10):
@@ -14,6 +15,10 @@ if __name__ == '__main__':
             index += 1
             current -= step
         answer[num] = index
+    # Each index value corresponds to the lexicographic position of the
+    # element that is supposed to be in that index
+    # Note that numbers may not be repeated
     print(answer)
 
+    # The actual correct final string
     num_ber = 2783915460
