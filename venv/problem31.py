@@ -10,6 +10,7 @@ if __name__ == '__main__':
         if target == 0:
             return 1;
         count = 0
+        # Range form Zero to account for possibility of not including that coin
         for multiple in range(0, 201):
             this_subtraction = multiple * list[0]
             if this_subtraction > target:
