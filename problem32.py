@@ -13,7 +13,6 @@ if __name__ == '__main__':
                 continue
             if len(sum_of_strings) == len(set(sum_of_strings)) == 9:
                 track.append(a * b)
-                print(a, b, a * b)
     count = 0
     for num in set(track):
         count += num
