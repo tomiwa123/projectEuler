@@ -24,16 +24,16 @@ if __name__ == '__main__':
                 top *= numerator
                 bottom *= denominator
 
+
     def simplify_frac(a, b):
-        # print(a, b)
         above = a
         below = b
-        for divisor in range(a-1, 1, -1):
+        for divisor in range(a - 1, 1, -1):
             if above % divisor == 0 and below % divisor == 0:
                 print(above, below, divisor)
                 above /= divisor
                 below /= divisor
         return above, below
 
-    # print(simplify_frac(48, 64))
+
     print(simplify_frac(top, bottom))
