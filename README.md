@@ -1,4 +1,4 @@
-## A list of solutions for projectEuler problems
+## A list of solutions for Project Euler problems
 ---
 All the problems can be found at [Project Euler](projecteuler.net "Project Euler Site")
 
