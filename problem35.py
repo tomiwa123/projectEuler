@@ -10,12 +10,13 @@ if __name__ == '__main__':
         return True
   
   def is_circular_prime(num):
+    # Currently validates only permutable primes
     # circular prime cannot contain digits 2, 4, 6, 8, 5, 0
     string_num = str(num)
     for test_num in ['0', '2', '4', '5', '6', '8']:
       if test_num in string_num:
         return False
-    
+
     if num in answers:
       return False
 
@@ -36,10 +37,9 @@ if __name__ == '__main__':
 
   # print(list(itertools.permutations([1, 2, 3])))
   answers = list()
-  for num in range(1, 100):
+  for num in range(1, 1000000):
     result = is_circular_prime(num)
     if result:
       answers = answers + result
   
   print(list(set(answers)))
-
