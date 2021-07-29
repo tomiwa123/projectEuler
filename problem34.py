@@ -1,13 +1,25 @@
 if __name__ == '__main__':
-    def factorial(number):
-        if number <= 1:
-            return 1
-        return number * factorial(number - 1)
 
-    for num in range(10, 1000000):
-        string = str(num)
-        sum = 0
-        for digit in string:
-            sum += factorial(int(digit))
-        if sum == num:
-            print(sum, num)
+  factorials = {
+    '0': 1,
+    '1': 1,
+    '2': 2,
+    '3': 6,
+    '4': 24,
+    '5': 120,
+    '6': 720,
+    '7': 5040,
+    '8': 40320,
+    '9': 362880
+  }
+
+  answer = 0
+  for num in range(12, 1000000):
+    string = str(num)
+    sum = 0
+    for letter in string:
+      sum += factorials[letter]
+    if sum == num:
+      answer += sum
+
+  print(answer)
