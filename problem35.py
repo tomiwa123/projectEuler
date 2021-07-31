@@ -16,13 +16,19 @@ if __name__ == '__main__':
     for test_num in ['0', '2', '4', '5', '6', '8']:
       if test_num in string_num:
         return False
-
+        
     if num in answers:
       return False
-
-    list_of_permutations = list(itertools.permutations(list(string_num)))
+    
+    # list_of_permutations = list(itertools.permutations(list(string_num)))
+    list_of_permutations = []
     length = len(string_num)
     new_coprimes = []
+
+    
+    for i in range(0, length):
+      list_of_permutations.append(list(string_num))
+      string_num = string_num[1:] + string_num[0]
 
     for permutation in list_of_permutations:
       number = 0
@@ -37,9 +43,15 @@ if __name__ == '__main__':
 
   # print(list(itertools.permutations([1, 2, 3])))
   answers = list()
+  answers.append(2)
+  answers.append(5)
   for num in range(1, 1000000):
     result = is_circular_prime(num)
     if result:
       answers = answers + result
   
-  print(list(set(answers)))
+  answers = list(set(answers))
+  answers.sort()
+  print("The circular primes are: {}".format(answers))
+  print(len(list(set(answers))))
+
