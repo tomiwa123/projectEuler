@@ -16,9 +16,9 @@ if __name__ == '__main__':
         return False
     return True
 
-  answer = []
-  for num in range(11, 586):
+  answer = 0
+  for num in range(11, 1000000):
     if check_pallindrome(num) and check_bin_pallindrome(bin(num)):
-      answer.append(num)
+      answer += num
 
   print(answer)
