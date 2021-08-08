@@ -28,7 +28,7 @@ if __name__ == '__main__':
     return list(set(versions))
   
   truncatable_primes = []
-  for num in range(11, 10000000):
+  for num in range(11, 100000):
     if not is_prime(num):
       continue
     versions = get_versions(num)
@@ -44,9 +44,8 @@ if __name__ == '__main__':
     
     if validating:
       truncatable_primes.append(num)
-      print(num)
   
-  print("Done")
+  print("The truncatable primes are:")
   print(truncatable_primes)
   print(len(truncatable_primes))
 
