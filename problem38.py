@@ -11,12 +11,14 @@ if __name__ == '__main__':
     return result
   
   def is_list_pandigital(num_list):
+    if len(num_list) != 9:
+      return False
     modified_num_list = list(map(int, num_list))
     return set(modified_num_list) == digits_set
 
   biggest_pandigital = 0
   number_index = (0, 0)
-  for num in range(1, 1000000):
+  for num in range(1, 10000):
     concatenated_product = []
     index = 1
     
@@ -26,10 +28,10 @@ if __name__ == '__main__':
       concatenated_product.extend(product_list)
       index += 1
     
-    if not is_list_pandigital(concatenated_product[:9]):
+    if not is_list_pandigital(concatenated_product):
       continue
     
-    pandigital = num_from_list(concatenated_product[:9])
+    pandigital = num_from_list(concatenated_product)
     biggest_pandigital = max(biggest_pandigital, pandigital)
     number_index = (num, index)
 
