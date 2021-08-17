@@ -28,7 +28,7 @@ if __name__ == '__main__':
     return list(set(versions))
   
   truncatable_primes = []
-  for num in range(11, 100000):
+  for num in range(11, 10000000, 2):
     if not is_prime(num):
       continue
     versions = get_versions(num)
