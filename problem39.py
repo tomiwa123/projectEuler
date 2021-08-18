@@ -13,6 +13,9 @@ if __name__ == '__main__':
         continue
       
       p = a + b + int(c)
+
+      if p > 1000:
+        continue
       
       if not perimeters.get(p):
         perimeters[p] = 1
@@ -20,5 +23,4 @@ if __name__ == '__main__':
         perimeters[p] += 1
   
   counter = Counter(perimeters)
-  print(perimeters)
   print(counter.most_common()[0])
