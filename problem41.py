@@ -19,6 +19,7 @@ if __name__ == "__main__":
 
   def find_largest_pandigital_prime():
     digits = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    largest = 0
 
     for num in range(9, 3, -1):
       pan_digits = set(digits[:num])
@@ -27,7 +28,8 @@ if __name__ == "__main__":
       for tupl in pandigitals:
         num_from_tupl = num_from_list(tupl)
         if is_prime(num_from_tupl):
-          print(num_from_tupl)
-          return
+          # print(num_from_tupl)
+          largest = max(largest, num_from_tupl)
+    print(largest)
 
   find_largest_pandigital_prime()
