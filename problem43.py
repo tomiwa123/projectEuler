@@ -36,4 +36,3 @@ if __name__ == "__main__":
       sum += num_from_list(pandigital)
 
   print(sum)
-  print(check_requirements(1406357289))
