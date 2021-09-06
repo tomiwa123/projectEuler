@@ -41,11 +41,10 @@ if __name__ == "__main__":
       pos_sol = test_c_value(pos_c)
       if not pos_sol:
         continue
-      # print(j, k, pos_sol)      
       
       # Calculate subtraction
       neg_sol = test_c_value(neg_c)
       if not neg_sol:
         continue
-      # print(j, k, neg_sol)      
+      
       print(j, k, pos_sol, neg_sol, j-k)
