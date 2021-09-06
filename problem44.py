@@ -1,5 +1,10 @@
 import cmath
 
+# It appears that the equation used in get_c_versions is an uncommon mathematical approach to solving the problem
+# I worked out the mathematical requirements of the problem to derive two quadratic equations
+# One tests for P_j + P_k = P_x -> pos_c is essentially, but not exactly, the sum of P_j and P_k
+#  The other is for P_j - P_k
+
 if __name__ == "__main__":
   
   def solve_quadratic(c, a = 3, b = -1):  
@@ -13,6 +18,7 @@ if __name__ == "__main__":
     return (ans1, ans2)
   
   def get_c_versions(j, k):
+    # Calculates the required intercepts related to the sum and diff of P_j and P_k
     pos_c = 3 * ((j ** 2) + (k ** 2)) - (j + k)
     neg_c = 3 * ((j ** 2) - (k ** 2)) - (j - k)
     return pos_c, neg_c
@@ -27,20 +33,19 @@ if __name__ == "__main__":
         return int(opt_2.real)
     return False
 
-  for j in range(4, 300):
-    for k in range(j-3, j):
+  for j in range(4, 3000):
+    for k in range(1, j):
       pos_c, neg_c = get_c_versions(j, k)
       
       # Calculate addition
       pos_sol = test_c_value(pos_c)
       if not pos_sol:
         continue
-      print(j, k, pos_sol)      
+      # print(j, k, pos_sol)      
       
       # Calculate subtraction
       neg_sol = test_c_value(neg_c)
       if not neg_sol:
         continue
-      print(j, k, neg_sol)      
-
-    
+      # print(j, k, neg_sol)      
+      print(j, k, pos_sol, neg_sol, j-k)
