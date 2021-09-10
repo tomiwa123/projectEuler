@@ -2,9 +2,11 @@ if __name__ == '__main__':
 
     days_of_week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
     pointer = 2
+    # Each value in the arrays below represents the offset to the day of the week after each month in that year
+    # year[i]  = no. of days in month i % 28
     regular_year = [3, 0, 3, 2, 3, 2, 3, 3, 2, 3, 2, 3]
     leap_year = [3, 1, 3, 2, 3, 2, 3, 3, 2, 3, 2, 3]
-    special_year = [3, 1, 3, 2, 3, 2, 3, 3, 2, 3, 2]
+    special_year = [3, 1, 3, 2, 3, 2, 3, 3, 2, 3, 2, 3]
     count = 0
 
     for year in range(1901, 2001):

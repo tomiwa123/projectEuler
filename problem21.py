@@ -8,11 +8,8 @@ if __name__ == '__main__':
                     divisor_sum += number // poss_factor
         return divisor_sum
 
-
-    print(sum_divisors(220))
-
     amicable_sum = 0
-    store = ["NOT TOUCH"]
+    store = ["Placeholder"]
     for num in range(1, 10001):
         store.append(sum_divisors(num))
     for num in range(1, 10001):
