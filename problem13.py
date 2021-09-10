@@ -106,9 +106,4 @@ if __name__ == '__main__':
     for num in list_of_numbers:
         sum_of_numbers += num
 
-    import math
-    while len(str(sum_of_numbers)) > 10:
-        # Cut down to 10
-        sum_of_numbers = math.floor(sum_of_numbers/10)
-
     print(sum_of_numbers)
