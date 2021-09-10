@@ -21,16 +21,14 @@ if __name__ == '__main__':
 71636269561882670428252483600823257530420752963450'''
 
     max_prod = 0
-    num_list = list(filter(lambda let: let.isnumeric(), list(string)))
+    num_list = list(filter(lambda let: let.isdigit(), list(string)))
     length = len(num_list)
 
-    for index in range(0, length):
-        if index <= length - 13:
-            this_prod = 1
-            for subset_index in range(index, index+13):
-                this_prod *= int(num_list[subset_index])
-            if this_prod > max_prod:
-                max_prod = this_prod
+    for index in range(0, length - 12):
+        this_prod = 1
+        for subset_index in range(index, index+13):
+            this_prod *= int(num_list[subset_index])
+        max_prod = max(max_prod, this_prod)
 
     print(max_prod)
 
