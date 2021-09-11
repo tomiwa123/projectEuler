@@ -47,4 +47,7 @@ if __name__ == "__main__":
       if not neg_sol:
         continue
       
-      print(j, k, pos_sol, neg_sol, j-k)
+      print(j, k, pos_sol, neg_sol)
+      answer = (j * ((3 * j) - 1)) / 2 \
+        - (k * ((3 * k) - 1)) / 2
+      print(answer)

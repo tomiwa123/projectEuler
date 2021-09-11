@@ -21,7 +21,7 @@ if __name__ == "__main__":
     digits = [1, 2, 3, 4, 5, 6, 7, 8, 9]
     largest = 0
 
-    for num in range(9, 3, -1):
+    for num in range(7, 6, -1):
       pan_digits = set(digits[:num])
       pandigitals = list(permutations(pan_digits))
 

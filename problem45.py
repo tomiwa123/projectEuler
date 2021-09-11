@@ -13,12 +13,12 @@ if __name__ == "__main__":
     return (ans1, ans2)
   
   def solve_quadratic_tri(c, a=1, b=1):
-    return solve_quadratic(a, b, -c)
+    return solve_quadratic(a, b, -2 * c)
   
   def solve_quadratic_pent(c, a=3, b=-1):
-    return solve_quadratic(a, b, -c)
+    return solve_quadratic(a, b, -2 * c)
 
-  def solve_quadratic_hex(c, a=4, b=-2):
+  def solve_quadratic_hex(c, a=2, b=-1):
     return solve_quadratic(a, b, -c)
   
   def test_roots(root_1, root_2):
@@ -31,24 +31,24 @@ if __name__ == "__main__":
         return int(root_2.real)
     return False
 
-  for num in range(40000, 10000000):
+  for num in range(20000000, 40000000):
     # Check if num is triangle
     solution = [num]
-    tri_sol = solve_quadratic_tri(num * 2)
+    tri_sol = solve_quadratic_tri(num)
     
     if not test_roots(*tri_sol):
       continue
     # print(test_roots(*tri_sol))
     solution.append(test_roots(*tri_sol))
 
-    pent_sol = solve_quadratic_pent(num * 2)
+    pent_sol = solve_quadratic_pent(num)
     
     if not test_roots(*pent_sol):
       continue
     # print(test_roots(*pent_sol))
     solution.append(test_roots(*pent_sol))
     
-    hex_sol = solve_quadratic_hex(num * 2)
+    hex_sol = solve_quadratic_hex(num)
     
     if not test_roots(*hex_sol):
       continue

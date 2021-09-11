@@ -8,6 +8,7 @@ if __name__ == '__main__':
             b %= a
             while a >= b:
                 a -= b
+                print(a)
                 s += a
         return s
 
