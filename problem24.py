@@ -20,5 +20,5 @@ if __name__ == '__main__':
     # Note that numbers may not be repeated
     print(answer)
 
-    # The actual correct final string
+    # The actual correct final string using iterative calculator process
     num_ber = 2783915460

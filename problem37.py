@@ -47,6 +47,9 @@ if __name__ == '__main__':
   
   print("The truncatable primes are:")
   print(truncatable_primes)
-  print(len(truncatable_primes))
+  sum = 0
+  for prime in truncatable_primes:
+    sum += prime
+  print(sum)
 
   

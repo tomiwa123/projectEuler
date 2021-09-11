@@ -4,11 +4,11 @@ if __name__ == '__main__':
     def find_possible_sums(list, target):
         if list == []:
             if target == 0:
-                return 1;
+                return 1
             else:
-                return 0;
+                return 0
         if target == 0:
-            return 1;
+            return 1
         count = 0
         # Range form Zero to account for possibility of not including that coin
         for multiple in range(0, 201):

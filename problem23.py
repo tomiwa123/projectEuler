@@ -16,7 +16,7 @@ if __name__ == '__main__':
     for num in range(1, 28124):
         abundance_dictionary[num] = check_abundance(num)
 
-    tally = (23 * 24) // 2
+    tally = (23 * 24) // 2 # sum to n = (n) * (n+1) / 2
     for num in range(24, 28124):
         for slices in range(12, num // 2 + 1):
             if abundance_dictionary[slices] and abundance_dictionary[num - slices]:
