@@ -33,7 +33,7 @@ if __name__ == '__main__':
   
   def check_list(x):
     length = len(current_factors) - 1
-    for num in range(length, length - x):
+    for num in range(length, length - x, -1):
       if current_factors[num] != x:
         return False
     return True
@@ -52,12 +52,12 @@ if __name__ == '__main__':
   #   return factors
 
   def count_prime_factors(num):
+    if is_prime(num):
+      current_factors.append(1)
+      return 1
     count = 0
     for divisor in range(2, num + 1):
       if is_prime(divisor) and num % divisor == 0:
-        if num == divisor:
-          current_factors.append(1)
-          return 1
         factor_count = current_factors[num / divisor]
         if (num / divisor) % divisor == 0:
           current_factors.append(factor_count)
@@ -74,11 +74,14 @@ if __name__ == '__main__':
   # current_factors[3] = get_prime_factors(213)
   current_factors.append(0)
   current_factors.append(1)
+  current_factors.append(1)
+  current_factors.append(1)
 
-  for num in range(2, 1000):
-    count_prime_factors(num)
-    if check_list(3):
+  for num in range(4, 1000000):
+    # count_prime_factors(num)
+    print(num, count_prime_factors(num))
+    if check_list(4):
       # print(current_factors)
-      print(num-2)
+      print(num-3)
       break
 
