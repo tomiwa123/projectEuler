@@ -14,9 +14,9 @@ for x in range(2, 100):
     for a in range(1, x + 1):
       for b in range(1, y + 1):
         count += count_variations(a, b, x, y)
-    print(x, y, count)
     if abs(2000000 - count) < abs(2000000 - max_count):
       max_count = count
       max_x_y = (x, y)
 
 print(max_x_y, max_count)
+print(max_x_y[0] * max_x_y[1])
