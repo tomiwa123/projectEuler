@@ -8,8 +8,7 @@ def get_next_digit_sqrt(divisor, dividend):
     if new_divisor * num < new_dividend:
       new_dividend = int(str(new_dividend - (new_divisor * num)) + "00")
       return num, new_divisor + num, new_dividend
-    # else:
-    #   print(new_dividend - new_divisor * num, new_divisor, new_dividend)
+      
   return 0, divisor, int(str(new_dividend) + "0") 
   # new_dividend = int(str(new_dividend) + "0")
 
@@ -22,7 +21,7 @@ def hundred_digits_sqrt(num):
 
   div = math.floor(math.sqrt(num))
   divisor, dividend = int(div * 2), int(str(int(num - (div ** 2))) + "00")
-  for _ in range(108):
+  for _ in range(100):
     next_digit, divisor, dividend = get_next_digit_sqrt(divisor, dividend)
     # print(next_digit)
     digits.append(next_digit)
@@ -30,7 +29,8 @@ def hundred_digits_sqrt(num):
   return sum
 
 sum = 0
-for num in range(1, 3):
+for num in range(1, 100):
   sum += hundred_digits_sqrt(num)
-print(digits)
+  # print(num, len(digits), sum)
+  digits = []
 print (sum)
